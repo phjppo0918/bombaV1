@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'mysql:mysql-connector-java:8.0.27'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation 'commons-logging:commons-logging:1.2'
+    implementation 'cglib:cglib:3.3.0'
+   // implementation 'org.springframework:spring-context:3.0.7.RELEASE'
+
+
+
+    testImplementation 'org.assertj:assertj-core:3.22.0'
+
+
+    implementation 'org.springframework:spring-context:5.2.19.RELEASE'
+}
+
+test {
+    useJUnitPlatform()
+}
